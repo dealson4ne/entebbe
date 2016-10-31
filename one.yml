@@ -14,4 +14,4 @@
   - name: Ensure that NTP service is Started
     service:
       name: ntp
-      state: Started
+      state: started
