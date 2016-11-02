@@ -1,0 +1,16 @@
+---
+# tasks file for role
+- name: Add ansible user
+  user:
+    name: ansible
+    state: present
+    generate_ssh_key: true
+- name: Ensure that NTP is available
+  apt:
+    name: ntp
+    state: present
+- name: Ensure that NTP service is Started
+  service:
+    name: ntp
+    state: started
+
